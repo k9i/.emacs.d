@@ -9,3 +9,22 @@
 
 # Undo-tree save-files
 *.~undo-tree
+
+# OS-generated files (Windows)
+desktop.ini
+ehthumbs.db
+Thumbs.db
+
+# Emacs auto save file
+\#*#
+
+# syncthing
+.stfolder
+.stfolder/
+.stglobalignore.txt
+.stignore
+.stversions
+.stversions/
+
+emacs.d/elpa
+emacs.d/eshell

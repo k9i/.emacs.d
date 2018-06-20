@@ -1,0 +1,15 @@
+usefull packages
+==================
+* yaml-mode
+* which-key
+* magit
+
+packageの使い方
+=================
+1. list packages:
+  M-x package-list-packages
+    or 
+  M-x package-list-packages-no-fetech
+2. select package to install:  i
+3. install package: x
+
