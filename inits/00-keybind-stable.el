@@ -26,3 +26,6 @@
 ;;
 (global-set-key (kbd "<f6>") 'other-window)
 (global-set-key (kbd "C-x d") 'dired-toggle)
+
+;; magit
+(global-set-key (kbd "C-x g") 'magit-status)
