@@ -16,10 +16,10 @@
 	    (define-key dired-mode-map (kbd ".") 'dired-omit-switch)
 	    (define-key dired-mode-map (kbd ",") 'dired-clean-directory)))
 
-(define-key dired-mode-map (kbd "/") 'dired-omit-switch)
-(define-key dired-mode-map (kbd "V") 'dired-omit-switch)
-(define-key dired-mode-map (kbd ".") 'dired-omit-switch)
-(define-key dired-mode-map (kbd ",") 'dired-clean-directory)
+;;(define-key dired-mode-map (kbd "/") 'dired-omit-switch)
+;;(define-key dired-mode-map (kbd "V") 'dired-omit-switch)
+;;(define-key dired-mode-map (kbd ".") 'dired-omit-switch)
+;;(define-key dired-mode-map (kbd ",") 'dired-clean-directory)
 
 ;;=======================================================================
 
