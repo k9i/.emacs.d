@@ -26,5 +26,5 @@ Thumbs.db
 .stversions
 .stversions/
 
-emacs.d/elpa
-emacs.d/eshell
+elpa
+eshell

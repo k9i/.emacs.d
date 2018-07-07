@@ -9,14 +9,18 @@
 	    (define-key dired-mode-map "r" 'wdired-change-to-wdired-mode)))
 
 ;; add key "/", "V" to togle dired-omit-mode
-;;(add-hook 'dired-load-hook 
-;;	  (lambda ()
-;;	    (define-key dired-mode-map "/" 'dired-omit-mode)
-;;	    (define-key dired-mode-map "V" 'dired-omit-mode)))
+(add-hook 'dired-load-hook 
+	  (lambda ()
+	    (define-key dired-mode-map "/" 'dired-omit-mode)
+	    (define-key dired-mode-map "V" 'dired-omit-mode)
+	    (define-key dired-mode-map (kbd ".") 'dired-omit-switch)
+	    (define-key dired-mode-map (kbd ",") 'dired-clean-directory)))
+
 (define-key dired-mode-map (kbd "/") 'dired-omit-switch)
 (define-key dired-mode-map (kbd "V") 'dired-omit-switch)
 (define-key dired-mode-map (kbd ".") 'dired-omit-switch)
 (define-key dired-mode-map (kbd ",") 'dired-clean-directory)
+
 ;;=======================================================================
 
 ;; Do What I Mean
