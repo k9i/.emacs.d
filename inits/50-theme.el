@@ -6,8 +6,11 @@
 (add-to-list 'custom-theme-load-path (locate-user-emacs-file "themes/emacs-color-theme-solarized"))
 (add-to-list 'load-path (locate-user-emacs-file "themes"))
 
-;; use 'M-x customize-theme'
-;;(cond
-;; ((< emacs-major-version 24)
-;;  (load-theme 'molokai t))
-;; ((>= emacs-major-version 24))
+;; or use 'M-x customize-theme'
+(cond
+ ((< emacs-major-version 24)
+  (load-theme 'molokai t))
+ ((>= emacs-major-version 24)
+  (load-theme 'molokai t)))
+
+
