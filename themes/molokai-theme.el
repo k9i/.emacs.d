@@ -33,9 +33,11 @@
 
 (let ((class '((class color) (min-colors 89)))
       ;; molokai palette
-      (molokai-white          "#ffffff")
+;;      (molokai-white          "#ffffff")
+      (molokai-white          "#f2f2f2")
       (molokai-fg             "#f8f8f0")
-      (molokai-red            "#ff0000")
+;;      (molokai-red            "#ff0000")
+      (molokai-red            "#f20000")
       (molokai-pink           "#f92672")
       (molokai-orange+5       "#ef5939")
       (molokai-orange         "#fd971f")

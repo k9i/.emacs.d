@@ -132,27 +132,12 @@
 
 
 ;;----------------------------------------------------------------------
+(setq custom-file (locate-user-emacs-file "custom.el"))
+;;----------------------------------------------------------------------
 ;;
 ;; http://www.kmc.gr.jp/~tak/memo/emacs-local-variable.html
 ;;
 ;;----------------------------------------------------------------------
-
-
-
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(custom-safe-themes
-   (quote
-    ("80c44e00b3f8f38570015e09d76d60ee73e6bf2d3b8bdb82c2abf5765c038fdc" "ace7afb1ca129b605713ff4a8f9c1269940b8b360c4f305b79c8157ac842464f" default))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
  ;; Local variables:
 ;; mode: Emacs-Lisp
 ;; End:
