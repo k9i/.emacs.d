@@ -138,23 +138,12 @@
 ;;----------------------------------------------------------------------
 
 
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(ansi-color-faces-vector
-   [default bold shadow italic underline bold bold-italic bold])
- '(ansi-color-names-vector
-   (vector "#ffffff" "#f36c60" "#8bc34a" "#fff59d" "#4dd0e1" "#b39ddb" "#81d4fa" "#262626"))
- '(company-quickhelp-color-background "#4F4F4F")
- '(company-quickhelp-color-foreground "#DCDCCC")
- '(compilation-message-face (quote default))
- '(cua-global-mark-cursor-color "#2aa198")
- '(cua-normal-cursor-color "#839496")
- '(cua-overwrite-cursor-color "#b58900")
- '(cua-read-only-cursor-color "#859900")
- '(custom-enabled-themes (quote (reverse)))
  '(custom-safe-themes
    (quote
     ("e9460a84d876da407d9e6accf9ceba453e2f86f8b86076f37c08ad155de8223c" "fa2b58bb98b62c3b8cf3b6f02f058ef7827a8e497125de0254f56e373abee088" "78496062ff095da640c6bb59711973c7c66f392e3ac0127e611221d541850de2" "cd03a600a5f470994ba01dd3d1ff52d5809b59b4a37357fa94ca50a6f7f07473" "bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" "190a9882bef28d7e944aa610aa68fe1ee34ecea6127239178c7ac848754992df" "ace7afb1ca129b605713ff4a8f9c1269940b8b360c4f305b79c8157ac842464f" "bcc6775934c9adf5f3bd1f428326ce0dcd34d743a92df48c128e6438b815b44f" "8db4b03b9ae654d4a57804286eb3e332725c84d7cdab38463cb6b97d5762ad26" "415cb7293497da4a287aae6017643d554dbbaa49ba410c50b5d75cee123c4f17" "95b0bc7b8687101335ebbf770828b641f2befdcf6d3c192243a251ce72ab1692" "def610e6d1739e5518b29ca660962905b767aeeee396a71ddcd3a41fbfd2dd28" "dfcf858acee06834f9332f0c1660e15204ca84507b30c0723bd25fbeff26e96b" "c3c0a3702e1d6c0373a0f6a557788dfd49ec9e66e753fb24493579859c8e95ab" "6b0d63ee94efc70d7ffccfd20f7618af0ad2a03900c439ff26a44ce8c2f735b9" "ea20028ea8def077127aec27b6e13a9b8e5c6a20c636c0b0d1dd1b4cd66cfdaf" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "a24c5b3c12d147da6cef80938dca1223b7c7f70f2f382b26308eba014dc4833a" "f39f2583c6aa9107d058c54067f62e30194b204fa35c8e8fc41fba7cc30f8ddc" "a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" default)))
@@ -251,9 +240,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(ediff-current-diff-A ((t (:foreground "cyan" :background "brown"))))
- '(ediff-current-diff-Ancestor ((t (:foreground "cyan" :background "brown")))))
-;; Local variables:
+ )
+ ;; Local variables:
 ;; mode: Emacs-Lisp
 ;; End:
 ;;
