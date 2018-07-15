@@ -13,6 +13,9 @@
   )
  ((>= emacs-major-version 24)
   (load-theme 'molokai t)
+;;  (load-theme 'moe-dark t)
+;;  (require 'apropospriate)
+;;  (load-theme 'apropospriate-dark t)
   ))
 
 
