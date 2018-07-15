@@ -12,6 +12,11 @@
 (global-set-key (kbd "M-g") 'goto-line)
 (global-set-key (kbd "M-ESC ESC") 'keyboard-quit)
 
+(global-set-key (kbd "C-x 2") 'split-window-below)
+(global-set-key (kbd "C-x -") 'split-window-below)
+(global-set-key (kbd "C-x 3") 'split-window-right)
+(global-set-key (kbd "C-x |") 'split-window-right)
+
 ;; windmove
 (global-set-key (kbd "C-c <left>")  'windmove-left)
 (global-set-key (kbd "C-c <right>") 'windmove-right)
@@ -23,7 +28,6 @@
 (global-set-key (kbd "C-<up>")    'windmove-up)
 (global-set-key (kbd "C-<down>")  'windmove-down)
 
-;;
 (global-set-key (kbd "<f6>") 'other-window)
 (global-set-key (kbd "C-x d") 'dired-toggle)
 
@@ -32,3 +36,4 @@
 
 ;; ibuffer
 (global-set-key (kbd "C-x C-b") 'ibuffer)
+
