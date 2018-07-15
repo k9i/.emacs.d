@@ -15,7 +15,7 @@
 
 ;; face
 (global-set-key (kbd "<f2> l")  'list-faces-display)
-(global-set-key (kbd "<f2> d")  'descibe-face)
+(global-set-key (kbd "<f2> f")  'describe-face)
 
 ;; eregistory for ediff
 (global-set-key (kbd "<f2> e")  'eregistry)

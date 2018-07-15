@@ -25,3 +25,4 @@ M-x descibe-face
 M-x what-cursor-position
 C-u C-x =
 
+You can run the command ‘describe-face’ with M-x d-fa RET
