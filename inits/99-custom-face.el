@@ -19,8 +19,8 @@
  '(ediff-odd-diff-B ((t (:background "grey 25"))))
  '(ediff-odd-diff-C ((t (:background "grey 25"))))
 
- '(font-lock-comment-face ((t (:foreground "#b0bec5"))))
- '(font-lock-comment-delimiter-face ((t (:foreground "#b0bec5"))))
+;; '(font-lock-comment-face ((t (:foreground "#b0bec5"))))
+;; '(font-lock-comment-delimiter-face ((t (:foreground "#b0bec5"))))
 
  '(lazy-highlight ((t (:background "#465f5f"))))
 )

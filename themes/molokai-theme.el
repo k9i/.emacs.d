@@ -33,7 +33,7 @@
 
 (let ((class '((class color) (min-colors 89)))
       ;; molokai palette
-;;      (molokai-white          "#ffffff")
+;;      (molokai-white          "#ffffff") ;; original
       (molokai-white          "#f2f2f2")
       (molokai-fg             "#f8f8f0")
 ;;      (molokai-red            "#ff0000")
@@ -66,8 +66,9 @@
       (molokai-bg             "#1b1d1e")
       (molokai-grey+10        "#080808")
       (molokai-dark           "#000000")
-;;      (molokai-base01         "#465457")
-      (molokai-base01         "#7E8E91")
+;;      (molokai-base01         "#465457") ;; original
+;;      (molokai-base01         "#ffffff") ;; for test
+      (molokai-base01         "#a2a9ab")
       (molokai-base02         "#455354")
       (molokai-base03         "#293739")
       (molokai-dodgerblue     "#13354a"))
