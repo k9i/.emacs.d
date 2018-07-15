@@ -13,3 +13,15 @@ packageの使い方
 2. select package to install:  i
 3. install package: x
 
+face名の確認
+================
+M-x list-faces-display
+
+https://www.emacswiki.org/emacs/Face#face
+
+M-x descibe-face
+# ediff-even-diff-A
+
+M-x what-cursor-position
+C-u C-x =
+
