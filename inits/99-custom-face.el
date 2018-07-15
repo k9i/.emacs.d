@@ -21,4 +21,6 @@
 
  '(font-lock-comment-face ((t (:foreground "#b0bec5"))))
  '(font-lock-comment-delimiter-face ((t (:foreground "#b0bec5"))))
+
+ '(lazy-highlight ((t (:background "#577777"))))
 )
