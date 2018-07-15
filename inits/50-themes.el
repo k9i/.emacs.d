@@ -3,7 +3,7 @@
 ;; 3. Reload the init file, or restart Emacs.
 
 (add-to-list 'custom-theme-load-path (locate-user-emacs-file "themes/"))
-(add-to-list 'custom-theme-load-path (locate-user-emacs-file "themes/emacs-color-theme-solarized"))
+;;(add-to-list 'custom-theme-load-path (locate-user-emacs-file "themes/emacs-color-theme-solarized"))
 (add-to-list 'load-path (locate-user-emacs-file "themes"))
 
 ;; or use 'M-x customize-theme'
