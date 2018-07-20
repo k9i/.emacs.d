@@ -35,7 +35,12 @@
       ;; molokai palette
 ;;      (molokai-white          "#ffffff") ;; original
       (molokai-white          "#f2f2f2")
-      (molokai-fg             "#f8f8f0")
+;;    (molokai-fg             "#f8f8f0")  ;; original
+;;    (molokai-fg             "#eee8d5") ;; 238,232,213
+      (molokai-fg             "#ccccc6") ;; 204,204,198
+;;      (molokai-fg             "#e5e5e5") ;; white? brightwhite?
+;;      (molokai-fg             "#d6d6d6") ;; 214,214,214 Light Grey
+;;      (molokai-fg             "#d6d6d1") ;; 214,214,209
 ;;      (molokai-red            "#ff0000")
       (molokai-red            "#f20000")
       (molokai-pink           "#f92672")
@@ -62,13 +67,14 @@
       (molokai-grey           "#808080")
       (molokai-grey+2         "#403d3d")
       (molokai-grey+3         "#4c4745")
-      (molokai-grey+5         "#232526")
+1      (molokai-grey+5         "#232526")
       (molokai-bg             "#1b1d1e")
       (molokai-grey+10        "#080808")
       (molokai-dark           "#000000")
-;;      (molokai-base01         "#465457") ;; original
-;;      (molokai-base01         "#ffffff") ;; for test
-      (molokai-base01         "#a2a9ab")
+;;      (molokai-base01         "#465457") ;; original for comment face
+;;      (molokai-base01         "#a2a9ab")
+;;      (molokai-base01         "#686865")
+      (molokai-base01         "#a3a39e")
       (molokai-base02         "#455354")
       (molokai-base03         "#293739")
       (molokai-dodgerblue     "#13354a"))
