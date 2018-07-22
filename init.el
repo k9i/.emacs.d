@@ -7,7 +7,7 @@
 
 ;; S-*でハイライトしたregionをkill-ring書き換え無しに置き換え可能にする
 ;; Tips: "C-x SPC" でいつでも rectangle selection へ切替が可能
-(delete-selection-mode 1)
+(delete-selection-mode t)
 
 ;;(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/emacs-color-theme-solarized")
 ;;(load-theme 'solarized-dark t) ;; または　(load-theme 'solarized-light t)
