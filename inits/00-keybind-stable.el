@@ -12,6 +12,7 @@
 (global-set-key (kbd "M-g") 'goto-line)
 (global-set-key (kbd "M-ESC ESC") 'keyboard-quit)
 
+;; split-window
 (global-set-key (kbd "C-x 2") 'split-window-below)
 (global-set-key (kbd "C-x -") 'split-window-below)
 (global-set-key (kbd "C-x 3") 'split-window-right)
