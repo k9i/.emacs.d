@@ -138,7 +138,7 @@
 ;; http://www.kmc.gr.jp/~tak/memo/emacs-local-variable.html
 ;;
 ;;----------------------------------------------------------------------
- ;; Local variables:
+;; Local variables:
 ;; mode: Emacs-Lisp
 ;; End:
 ;;
