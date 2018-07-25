@@ -67,7 +67,7 @@
       (molokai-grey           "#808080")
       (molokai-grey+2         "#403d3d")
       (molokai-grey+3         "#4c4745")
-1      (molokai-grey+5         "#232526")
+      (molokai-grey+5         "#232526")
       (molokai-bg             "#1b1d1e")
       (molokai-grey+10        "#080808")
       (molokai-dark           "#000000")
