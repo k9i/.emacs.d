@@ -12,11 +12,6 @@
 ;;(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/emacs-color-theme-solarized")
 ;;(load-theme 'solarized-dark t) ;; または　(load-theme 'solarized-light t)
 
-; (cond (window-system
-;        (add-to-list 'load-path "~/.emacs.d/oblivion-emacs-master")
-;       (require 'color-theme-oblivion)
-;       (color-theme-oblivion)))
-
 ;;----------------------------------------------------------------------
 ;; for package.el
 
@@ -27,7 +22,7 @@
 ;;
 ;; no internet connection: M-x package-list-packages-no-feteh
 
-(cond ((< emacs-major-version 24)
+(cond ((<= emacs-major-version 24)
        (add-to-list 'load-path (locate-user-emacs-file "lisp/package"))
        (require 'package)))
 

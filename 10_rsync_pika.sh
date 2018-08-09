@@ -5,9 +5,16 @@ PROGRAM_NAME=$(basename $0 ".sh")
 
 #==================================================================================
 source_dir=/work/se/oscar08/.emacs.d
+targets=""
 # targets="bgegten:work/ bgegone:work/ bgeguno:work/ bvkaone:work/ bvkauno:work/"
 # targets="bgegten:work/ bgeguno:work/ bvkaone:work/ bvkauno:work/"
-targets="root@bvgm03786:/root/ "
+
+### sptest PikaOS7
+for h in bvgm03786 bvgm03727 bvgm03728 bvgm03729 bvgm03733 bvgm03734 bvgm03735; do
+  for u in root bazar1084; do
+    targets="$targets $u@$h:"
+  done
+done
 #==================================================================================
 
 usage() {
