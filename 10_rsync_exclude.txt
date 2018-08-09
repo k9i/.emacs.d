@@ -1,0 +1,10 @@
+# include (+)
+
+# exlude
+- OLD/
+- test_*
+# exclude log
+- *.log
+# other exclude all
+# - *
+- .git
