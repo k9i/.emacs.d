@@ -22,7 +22,7 @@
 ;;
 ;; no internet connection: M-x package-list-packages-no-feteh
 
-(cond ((<= emacs-major-version 24)
+(cond ((<= emacs-major-version 23)
        (add-to-list 'load-path (locate-user-emacs-file "lisp/package"))
        (require 'package)))
 
@@ -33,7 +33,8 @@
 (package-initialize)
 
 (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/"))
-(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
+;;(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
+(add-to-list 'package-archives '("melpa-stable" . "http://stable.melpa.org/packages/"))
 ;; (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 
 ;;----------------------------------------------------------------------
