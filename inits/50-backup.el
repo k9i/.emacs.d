@@ -21,3 +21,6 @@
   (setq backup-directory-alist
         (cons (cons "\\.*$" (expand-file-name target))
               backup-directory-alist)))
+
+;; enable backup
+(setq make-backup-files t)
