@@ -31,3 +31,4 @@ eshell
 custom.el
 /kkcrc
 url
+async-bytecomp.log
