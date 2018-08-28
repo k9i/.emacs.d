@@ -1,3 +1,4 @@
+# -*- mode: Conf -*-
 # Compiled
 *.elc
 
@@ -26,9 +27,12 @@ Thumbs.db
 .stversions
 .stversions/
 
+elpa/
 elpa/**
 eshell
 custom.el
 /kkcrc
 url
 async-bytecomp.log
+auto-save-list/
+auto-save-list/**
