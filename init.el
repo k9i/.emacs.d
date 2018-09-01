@@ -6,11 +6,12 @@
 (setq inhibit-startup-message t)
 
 ;; S-*でハイライトしたregionをkill-ring書き換え無しに置き換え可能にする
-;; Tips: "C-x SPC" でいつでも rectangle selection へ切替が可能
 (delete-selection-mode t)
 
-;;(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/emacs-color-theme-solarized")
-;;(load-theme 'solarized-dark t) ;; または　(load-theme 'solarized-light t)
+;; 
+(setq completion-ignore-case t)
+(setq read-buffer-completion-ignore-case t)
+(setq read-file-name-completion-ignore-case t)
 
 ;;----------------------------------------------------------------------
 ;; for package.el
@@ -24,13 +25,14 @@
 
 (cond ((<= emacs-major-version 23)
        (add-to-list 'load-path (locate-user-emacs-file "lisp/package"))
-       (require 'package)))
-
-;; Added by Package.el.  This must come before configurations of
-;; installed packages.  Don't delete this line.  If you don't want it,
-;; just comment it out by adding a semicolon to the start of the line.
-;; You may delete these explanatory comments.
-(package-initialize)
+       (when (require 'package nil t)
+	 (package-initialize)))
+      (t
+       ;; Added by Package.el.  This must come before configurations of
+       ;; installed packages.  Don't delete this line.  If you don't want it,
+       ;; just comment it out by adding a semicolon to the start of the line.
+       ;; You may delete these explanatory comments.
+       (package-initialize)))
 
 (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/"))
 ;;(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
@@ -48,10 +50,25 @@
 (add-to-list 'load-path (locate-user-emacs-file "lisp"))
 
 ;;----------------------------------------------------------------------
+;; autoload-if-found from: http://www.sodan.org/~knagano/emacs/dotemacs.html
+;; init-loader内のファイルはエラーでも読み込み停止しない。
+(defun autoload-if-found (function file &optional docstring interactive type)
+  "set autoload iff. FILE has found."
+  (and (locate-library file)
+       (autoload function file docstring interactive type)))
+;; 使い方
+;; 引数は autoload と全く同じです。-if-found を付けるだけ
+;;;;(when (autoload-if-found 'bs-show "bs" "buffer selection" t)
+;;;;; autoload は成功した場合のみ non-nil を返すので、
+;;;; when の条件部に置くことで、依存関係にある設定項目を自然に表現できます。
+;;  (global-set-key [(control x) (control b)] 'bs-show)
+;;    (setq bs-max-window-height 10))
+
+;;----------------------------------------------------------------------
 ;; init-loader
-(require 'init-loader)
-(setq init-loader-show-log-after-init nil)
-(init-loader-load)
+(when (require 'init-loader nil t)
+  (setq init-loader-show-log-after-init nil)
+  (init-loader-load))
 
 ;;----------------------------------------------------------------------
 ;; Emacsen

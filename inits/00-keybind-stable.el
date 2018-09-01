@@ -60,3 +60,4 @@
 ;; describe-*
 (global-set-key (kbd "<f2> b")  'describe-bindings)
 (global-set-key (kbd "<f2> k")  'describe-key)
+(global-set-key (kbd "<f2> F")  'describe-function)
