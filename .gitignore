@@ -16,9 +16,6 @@ desktop.ini
 ehthumbs.db
 Thumbs.db
 
-# Emacs auto save file
-\#*#
-
 # syncthing
 .stfolder
 .stfolder/
@@ -27,6 +24,8 @@ Thumbs.db
 .stversions
 .stversions/
 
+# Emacs auto save file, etc.
+\#*#
 elpa/
 elpa/**
 eshell
@@ -36,3 +35,4 @@ url
 async-bytecomp.log
 auto-save-list/
 auto-save-list/**
+tramp
