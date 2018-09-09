@@ -1,7 +1,7 @@
 ;; -*- Emacs-Lisp -*-
 
 ;; 対応する括弧をハイライト
-(setq show-paren-delay 0)
+(setq show-paren-delay 0.15)
 (show-paren-mode t)
 
 ;; 編集時 buffer 再読み込み
