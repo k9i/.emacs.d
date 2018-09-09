@@ -36,3 +36,4 @@ url
 async-bytecomp.log
 auto-save-list/
 auto-save-list/**
+tramp
