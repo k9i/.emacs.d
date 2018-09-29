@@ -33,6 +33,7 @@ eshell
 custom.el
 /kkcrc
 url
+cookies*
 async-bytecomp.log
 auto-save-list/
 auto-save-list/**
