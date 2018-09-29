@@ -2,14 +2,18 @@
 (defvar my-favorite-package-list
   '(
     ;; ここに使っているパッケージを書く。
+    ;; C-u 0 M-: (変数名?)
+
     browse-kill-ring
+    buffer-flip
     dockerfile-mode
     docker-tramp
     magit
     markdown-mode
+    buffer-flip
+    use-package
     which-key
     yaml-mode
-    zoom-window
     )
   "packages to be installed")
 
