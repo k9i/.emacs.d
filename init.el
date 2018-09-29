@@ -23,25 +23,24 @@
 (setq read-buffer-completion-ignore-case t)
 (setq read-file-name-completion-ignore-case t)
 
-(if (> emacs-major-version 21) ; Emacs22 or later
-    (progn (load "init-key" t)
-	   (prefer-coding-system 'utf-8)
-	   (setq transient-mark-mode nil)
-	   (setq mouse-yank-at-point t)
-;	   (set-locale-environment nil)
-;	   (show-paren-mode t)
-	   (menu-bar-mode -1)))
-
-(if (= emacs-major-version 22) ; Emacs22 only
-    ;; to convert kanji code, type C-x RET f
-    (utf-translate-cjk-mode t))
-
-(if (<= emacs-major-version 21)
-    (progn (load "term/keyswap" t)))
+(cond 
+ ((>= emacs-major-version 22) ; Emacs22 or later
+  (progn 
+    (prefer-coding-system 'utf-8)
+    (setq transient-mark-mode nil)
+    (setq mouse-yank-at-point t)
+    ;;	   (set-locale-environment nil)
+    ;;	   (show-paren-mode t)
+    (menu-bar-mode -1)))
+ ((= emacs-major-version 22) ; Emacs22 only
+  ;; to convert kanji code, type C-x RET f
+  (utf-translate-cjk-mode t))
+ ((<= emacs-major-version 21) ; Emacs21 or before
+    (progn (load "term/keyswap" t))))
 
 
 ;;----------------------------------------------------------------------
-;; for package.el
+;; package.el
 
 ;; usage:
 ;; M-x package-list-package
@@ -67,6 +66,13 @@
 ;; (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 
 ;;----------------------------------------------------------------------
+;; use-package.el
+(eval-when-compile
+  ;; Following line is not needed if use-package.el is in ~/.emacs.d
+  (add-to-list 'load-path (locate-user-emacs-file "elpa"))
+  (require 'use-package))
+
+;;----------------------------------------------------------------------
 ;; autoload-if-found from: http://www.sodan.org/~knagano/emacs/dotemacs.html
 ;; * init-loader内のファイルはエラーでも読み込み停止しないので、必須ではない。
 ;; 使い方 引数は autoload と全く同じです。-if-found を付けるだけ
@@ -85,7 +91,7 @@
 (when (require 'init-loader nil t)
 ;;  (setq init-loader-show-log-after-init nil)
   (setq init-loader-show-log-after-init 'error-only)
-  (setq init-loader-byte-compile t)
+;;  (setq init-loader-byte-compile t)
   (init-loader-load))
 
 ;;
