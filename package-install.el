@@ -7,6 +7,7 @@
     docker-tramp
     magit
     markdown-mode
+    which-key
     yaml-mode
     zoom-window
     )
