@@ -1,6 +1,7 @@
 ; -*- Emacs-Lisp -*-
 ;; ~/.emacs.d/init.el
 ;;
+(setq custom-file (locate-user-emacs-file "custom.el"))
 (set-language-environment "Japanese")
 (setq auto-save-list-file-prefix "~/.cache/emacs/auto-save-list/.saves-")
 (setq inhibit-startup-message t)
@@ -144,8 +145,6 @@
 	   'global  '(mule-fonts)  'prepend)))))
 
 
-;;----------------------------------------------------------------------
-(setq custom-file (locate-user-emacs-file "custom.el"))
 ;;----------------------------------------------------------------------
 ;;
 ;; http://www.kmc.gr.jp/~tak/memo/emacs-local-variable.html
