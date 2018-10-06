@@ -1,5 +1,8 @@
 # .emacs.d と単なるメモ書き
 
+## 小技?
+- 変数の内容をバッファにペーストする
+  - ``C-u 0 M-: {変数名}``
 
 ## shortcut key
 - rectangle selection mode への切り替え(rectangle-mark-mode): `C-x SPC`
