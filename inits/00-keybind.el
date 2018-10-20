@@ -10,6 +10,7 @@
 
 (global-set-key (kbd "M-g") 'goto-line)
 (global-set-key (kbd "M-ESC ESC") 'keyboard-quit)
+(global-set-key (kbd "C-o") 'other-window)
 
 ;; split-window
 (global-set-key (kbd "C-x 2") 'split-window-below)
@@ -61,3 +62,5 @@
 (global-set-key (kbd "<f2> b")  'describe-bindings)
 (global-set-key (kbd "<f2> k")  'describe-key)
 (global-set-key (kbd "<f2> F")  'describe-function)
+
+(global-set-key (kbd "<f2> p")  'package-list-packages)
