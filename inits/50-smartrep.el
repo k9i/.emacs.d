@@ -13,8 +13,9 @@
 		       ("}" . enlarge-window-horizontally)
 		       ("]" . enlarge-window-horizontally)
 		       ("+" . balance-windows)
-		       ("^" . enlarge-window)
-		       ("~" . shrink-window) ;; S-^ in jp
+		       ("~" . enlarge-window) ;; S-^ in jp
+		       ("\\" . enlarge-window)
+		       ("|" . shrink-window) ;; S-\ in jp
 		       ("-" . shrink-window)))
 
 ;; (use-package smartrep
