@@ -26,7 +26,7 @@
 (cond 
  ((>= emacs-major-version 22) ; Emacs22 or later
   (progn 
-    (prefer-coding-system 'utf-8)
+;    (prefer-coding-system 'utf-8)
     (setq transient-mark-mode nil)
     (setq mouse-yank-at-point t)
     ;;	   (set-locale-environment nil)
