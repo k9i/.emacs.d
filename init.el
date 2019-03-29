@@ -13,6 +13,7 @@
 
 ;;----------------------------------------------------------------------
 (set-language-environment "Japanese")
+(setq lang (getenv "LANG"))
 (setq auto-save-list-file-prefix "~/.cache/emacs/auto-save-list/.saves-")
 (setq inhibit-startup-message t)
 
@@ -26,7 +27,12 @@
 (cond 
  ((>= emacs-major-version 22) ; Emacs22 or later
   (progn 
-;    (prefer-coding-system 'utf-8)
+    (if (or (equal lang "ja_JP.eucJP")
+	    (equal lang "ja_JP.ujis")
+	    (equal lang "ja_JP.EUC")
+	    (equal lang "japanese.euc"))
+	(progn (prefer-coding-system 'euc-jp-unix))
+      (progn (prefer-coding-system 'utf-8)))
     (setq transient-mark-mode nil)
     (setq mouse-yank-at-point t)
     ;;	   (set-locale-environment nil)
