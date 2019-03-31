@@ -43,7 +43,8 @@
 ;;      (molokai-fg             "#d6d6d1") ;; 214,214,209
 ;;      (molokai-red            "#ff0000")
       (molokai-red            "#f20000")
-      (molokai-pink           "#f92672")
+;;      (molokai-pink           "#f92672")
+      (molokai-pink           "#f21010")
       (molokai-orange+5       "#ef5939")
       (molokai-orange         "#fd971f")
       (molokai-yellow         "#ffff00")
