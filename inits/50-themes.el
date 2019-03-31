@@ -6,6 +6,8 @@
 ;;(add-to-list 'custom-theme-load-path (locate-user-emacs-file "themes/emacs-color-theme-solarized"))
 ;;(load-theme 'solarized-dark t) ;; または　(load-theme 'solarized-light t)
 
+(setq custom-safe-themes t)
+
 (add-to-list 'custom-theme-load-path (locate-user-emacs-file "themes/"))
 (add-to-list 'load-path (locate-user-emacs-file "themes"))
 
