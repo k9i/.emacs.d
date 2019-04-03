@@ -71,7 +71,8 @@
       (molokai-grey+5         "#232526")
       (molokai-bg             "#1b1d1e")
       (molokai-grey+10        "#080808")
-      (molokai-dark           "#000000")
+;;      (molokai-dark           "#000000") ;; original
+      (molokai-dark           "#262626") ;; from material
 ;;      (molokai-base01         "#465457") ;; original for comment face
 ;;      (molokai-base01         "#a2a9ab")
 ;;      (molokai-base01         "#686865")
