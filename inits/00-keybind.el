@@ -46,8 +46,11 @@
 (global-set-key (kbd "C-x R")  'revert-buffer-no-confirm)
 (global-set-key (kbd "<f2> r")  'auto-revert-tail-mode)
 
+;; override C-\
+(global-set-key (kbd "C-\\")  'indent-region)
 
-;; assign <f2>
+
+;; assign <f2>,<f5>
 ;; face
 (global-set-key (kbd "<f2> l")  'list-faces-display)
 (global-set-key (kbd "<f2> f")  'describe-face)
@@ -64,3 +67,21 @@
 (global-set-key (kbd "<f2> F")  'describe-function)
 
 (global-set-key (kbd "<f2> p")  'package-list-packages)
+
+;; assign <f2>,<f5>
+;; face
+(global-set-key (kbd "<f5> l")  'list-faces-display)
+(global-set-key (kbd "<f5> f")  'describe-face)
+
+;; eregistory for ediff
+(global-set-key (kbd "<f5> e")  'eregistry)
+
+;; customize-theme
+(global-set-key (kbd "<f5> t")  'customize-themes)
+
+;; describe-*
+(global-set-key (kbd "<f5> b")  'describe-bindings)
+(global-set-key (kbd "<f5> k")  'describe-key)
+(global-set-key (kbd "<f5> F")  'describe-function)
+
+(global-set-key (kbd "<f5> p")  'package-list-packages)
