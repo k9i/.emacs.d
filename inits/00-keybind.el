@@ -47,7 +47,7 @@
 (global-set-key (kbd "<f2> r")  'auto-revert-tail-mode)
 
 ;; override C-\
-(global-set-key (kbd "C-\\")  'indent-region)
+(global-set-key (kbd "C-\\")  'electric-indent-mode)
 
 
 ;; assign <f2>,<f5>
