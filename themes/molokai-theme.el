@@ -69,7 +69,8 @@
       (molokai-grey+2         "#403d3d")
       (molokai-grey+3         "#4c4745")
       (molokai-grey+5         "#232526")
-      (molokai-bg             "#1b1d1e") ;; original
+;;      (molokai-bg             "#1b1d1e") ;; original molokai
+      (molokai-bg             "#2f3236") ;; original2 (near base16-materia)
 ;;      (molokai-bg             "#263238") ;; from material
 ;;      (molokai-bg             "#102027") ;; from immaterial
       (molokai-grey+10        "#080808")
