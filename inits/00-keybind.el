@@ -11,6 +11,12 @@
 (global-set-key (kbd "M-g") 'goto-line)
 (global-set-key (kbd "M-ESC ESC") 'keyboard-quit)
 (global-set-key (kbd "C-o") 'other-window)
+(global-set-key "\M-\\" 'indent-region)
+
+;; override C-\
+(global-set-key (kbd "C-\\") 'indent-region)
+;;(global-set-key (kbd "C-\\")  'electric-indent-mode)
+(global-set-key (kbd "C-^") 'electric-indent-mode)
 
 ;; split-window
 (global-set-key (kbd "C-x 2") 'split-window-below)
@@ -45,10 +51,6 @@
 (require 'revert-buffer-no-confirm)
 (global-set-key (kbd "C-x R")  'revert-buffer-no-confirm)
 (global-set-key (kbd "<f2> r")  'auto-revert-tail-mode)
-
-;; override C-\
-(global-set-key (kbd "C-\\")  'electric-indent-mode)
-
 
 ;; assign <f2>,<f5>
 ;; face
