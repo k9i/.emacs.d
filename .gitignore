@@ -27,7 +27,6 @@ Thumbs.db
 # Emacs auto save file, etc.
 \#*#
 elpa/
-elpa/**
 eshell
 custom.el
 /kkcrc
@@ -35,6 +34,6 @@ url
 cookies*
 async-bytecomp.log
 auto-save-list/
-auto-save-list/**
 tramp
 session.*
+.cache/

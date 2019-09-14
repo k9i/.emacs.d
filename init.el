@@ -20,8 +20,13 @@
 ;;----------------------------------------------------------------------
 (set-language-environment "Japanese")
 (setq lang (getenv "LANG"))
-(setq auto-save-list-file-prefix "~/.cache/emacs/auto-save-list/.saves-")
 (setq inhibit-startup-message t)
+
+(setq auto-save-list-file-prefix "~/.cache/emacs/auto-save-list/.saves-")
+
+;; save minibuffer history
+(savehist-mode 1)
+(setq savehist-file "~/.cache/emacs/savehist")
 
 ;; S-*でハイライトしたregionをkill-ring書き換え無しに置き換え可能にする
 (delete-selection-mode t)
