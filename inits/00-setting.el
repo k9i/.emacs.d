@@ -1,5 +1,11 @@
 ;; -*- Emacs-Lisp -*-
 
+;; default to unified diffs
+(setq diff-switches '("-u" "-N"))
+
+;;; uncomment for CJK utf-8 support for non-Asian users
+(require 'un-define)
+
 ;; 対応する括弧をハイライト
 (setq show-paren-delay 0.15)  ;; default 0.15s
 (show-paren-mode t)

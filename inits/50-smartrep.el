@@ -4,6 +4,7 @@
 (setq smartrep-read-event-timeout 2)
 (smartrep-define-key global-map "C-x"
 		     '(("o" . other-window)
+		       ("^o" . other-window)
 		       ("0" . delete-window)
 		       ("1" . delete-other-windows)
 		       ("2" . split-window-below)
