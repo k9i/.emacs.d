@@ -1,5 +1,0 @@
-(when (>= emacs-major-version 24)
-  (require 'json-mode)
-  (add-to-list 'auto-mode-alist '("\\.tfstate$" . json-mode))
-  (add-to-list 'auto-mode-alist '("\\.tfstate.backup$" . json-mode))
-  )
