@@ -1,5 +1,4 @@
 (use-package buffer-flip
-  :ensure t
 ;;  :chord (("u8" . buffer-flip)) ;; see: 50-key-chord.el
   :bind
   (("C-x B" . buffer-flip))
