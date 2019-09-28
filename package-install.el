@@ -3,16 +3,17 @@
   '(
     ;; ここに使っているパッケージを書く。
     ;; C-u 0 M-: (変数名?)
-
-    browse-kill-ring
+    use-package
+    buffer-flip
+    which-key
+    markdown-mode
+    yaml-mode
+    terraform-mode
     dockerfile-mode
     docker-tramp
+    ;; eww
     magit
-    markdown-mode
-    buffer-flip
-    use-package
-    which-key
-    yaml-mode
+    treemacs
     )
   "packages to be installed")
 

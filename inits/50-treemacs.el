@@ -1,5 +1,4 @@
 (use-package treemacs
-  :requires avy
   :defer 3
   :init
   (with-eval-after-load 'winum

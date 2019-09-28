@@ -1,7 +1,7 @@
 ;; -*- Emacs-Lisp -*-
 
 (use-package terraform-mode
-  :config
+  :init
   (add-to-list 'auto-mode-alist '("\\.tf.backup$" . terraform-mode))
   (add-to-list 'auto-mode-alist '("\\.tfbackup$" . terraform-mode))
   )
