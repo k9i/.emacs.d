@@ -7,6 +7,7 @@
     buffer-flip
     which-key
     markdown-mode
+    json-mode
     yaml-mode
     terraform-mode
     dockerfile-mode
