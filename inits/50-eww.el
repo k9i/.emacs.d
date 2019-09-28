@@ -1,9 +1,22 @@
  ;; -*- Emacs-Lisp -*-
 
 (use-package eww
+  :commands eww
   :init
   ;; default to google
-  (setq eww-search-prefix "https://www.google.co.jp/search?q=")
+  (setq eww-search-prefix "https://www.google.com/search?q=")
+  ;; 現在の url を eww で開く
+  (defun browse-url-with-eww ()
+  (interactive)
+  (let ((url-region (bounds-of-thing-at-point 'url)))
+    ;; url
+    (if url-region
+      (eww-browse-url (buffer-substring-no-properties (car url-region)
+                              (cdr url-region))))
+    ;; org-link
+    (setq browse-url-browser-function 'eww-browse-url)
+    (org-open-at-point)))
+  (global-set-key (kbd "C-c C-o") 'browse-url-with-eww)
 
   ;; Usage from info
   ;; - q  leave EWW by pressing ‘q’ (eww-quit)
@@ -18,34 +31,50 @@
   ;; customize
   ;; - c  (eww-toggle-colors) toggles whether to use HTML-specified colors or not.  This sets the ‘shr-use-colors’ variable.
 
-  :config
-  (define-key eww-mode-map "r" 'eww-reload)
-  (define-key eww-mode-map "c" 'eww-toggle-colors)
-  ;;(define-key eww-mode-map "c 0" 'eww-copy-page-url)
-  ;;(define-key eww-mode-map "p" 'scroll-down)
-  ;;(define-key eww-mode-map "n" 'scroll-up)
-  (define-key eww-mode-map "c" 'eww-toggle-colors)
-  (define-key eww-mode-map "p" 'scroll-down-command)
-  (define-key eww-mode-map "n" 'scroll-up-command)
-  (define-key eww-mode-map "h" 'left-char)
-  (define-key eww-mode-map "j" 'next-line)
-  (define-key eww-mode-map "k" 'previous-line)
-  (define-key eww-mode-map "l" 'right-char)
-  (define-key eww-mode-map "b" 'eww-back-url)
-  (define-key eww-mode-map "f" 'eww-forward-url)
-  (define-key eww-mode-map "r" 'eww-reload)
+  :bind
+  (:map eww-mode-map
+	      ("r" . eww-reload)
+	      ("c" . eww-toggle-colors)
+	      ;;("c 0" 'eww-copy-page-url)
+	      ;;("p" 'scroll-down)
+	      ;;("n" 'scroll-up)
+	      ("c" . eww-toggle-colors)
+	      ("p" . scroll-down-command)
+	      ("n" . scroll-up-command)
+	      ("h" . left-char)
+	      ("j" . next-line)
+	      ("k" . previous-line)
+	      ("l" . right-char)
+	      ("b" . eww-back-url)
+	      ("f" . eww-forward-url)
+	      ("R" . eww-reload)
+	      ("h" . backward-char)
+	      ("j" . next-line)
+	      ("k" . previous-line)
+	      ("l" . forward-char)
+	      ("J" . View-scroll-line-forward)  ;; カーソルは移動せず、画面がスクロースする
+	      ("K" . View-scroll-line-backward)
+	      ;;	     ("P" . previous-buffer)
+	      ;;	     ("N" . next-buffer)
+	      )
 
-  (bind-keys :map eww-mode-map
-	     ("R" . eww-reload)
-             ("h" . backward-char)
-             ("j" . next-line)
-             ("k" . previous-line)
-             ("l" . forward-char)
-             ("J" . View-scroll-line-forward)  ;; カーソルは移動せず、画面がスクロースする
-             ("K" . View-scroll-line-backward)
-	     ;;	     ("P" . previous-buffer)
-	     ;;	     ("N" . next-buffer)
-	     )
+  :config
+  (setq browse-url-browser-function 'eww-browse-url)
+  (define-key eww-mode-map "r" 'eww-reload)
+;;  (define-key eww-mode-map "c" 'eww-toggle-colors)
+;;  ;;(define-key eww-mode-map "c 0" 'eww-copy-page-url)
+;;  ;;(define-key eww-mode-map "p" 'scroll-down)
+;;  ;;(define-key eww-mode-map "n" 'scroll-up)
+;;  (define-key eww-mode-map "c" 'eww-toggle-colors)
+;;  (define-key eww-mode-map "p" 'scroll-down-command)
+;;  (define-key eww-mode-map "n" 'scroll-up-command)
+;;  (define-key eww-mode-map "h" 'left-char)
+;;  (define-key eww-mode-map "j" 'next-line)
+;;  (define-key eww-mode-map "k" 'previous-line)
+;;  (define-key eww-mode-map "l" 'right-char)
+;;  (define-key eww-mode-map "b" 'eww-back-url)
+;;  (define-key eww-mode-map "f" 'eww-forward-url)
+;;  (define-key eww-mode-map "r" 'eww-reload)
 
   ;; https://futurismo.biz/archives/2950/
   (defvar eww-disable-colorize t)
