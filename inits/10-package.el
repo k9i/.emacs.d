@@ -1,3 +1,4 @@
+;; -*- Emacs-Lisp -*-
 ;;----------------------------------------------------------------------
 ;; package.el
 
@@ -9,6 +10,7 @@
 ;; no internet connection: M-x package-list-packages-no-feteh
 
 (setq package-check-signature nil)
+;(setq package-enable-at-startup nil)
 
 (cond ((<= emacs-major-version 23)
        (add-to-list 'load-path (locate-user-emacs-file "lisp/package"))
