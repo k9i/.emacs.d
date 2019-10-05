@@ -1,6 +1,7 @@
 (use-package treemacs
-  :commands treemacs
-  :defer 3
+;  :if (locate-library "treemacs")
+;  :commands treemacs
+;  :defer t
   :init
   (with-eval-after-load 'winum
     (define-key winum-keymap (kbd "M-0") #'treemacs-select-window))
@@ -73,5 +74,6 @@
 ;;  :config (treemacs-icons-dired-mode))
 
 (use-package treemacs-magit
+;  :if (locate-library "treemacs-magit")
   :after treemacs magit
-  :ensure t)
+  )
