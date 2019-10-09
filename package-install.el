@@ -1,9 +1,8 @@
 
-(defvar my-favorite-package-list
-  '(
     ;; ここに使っているパッケージを書く。
     ;; C-u 0 M-: (変数名?)
-    use-package
+(defvar my-favorite-package-list
+  '(use-package
     buffer-flip
     which-key
     markdown-mode
