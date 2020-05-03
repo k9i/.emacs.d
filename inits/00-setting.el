@@ -17,7 +17,7 @@
 (global-auto-revert-mode 1)
 
 ;; save-buffer 時，buffer 末尾に空行が常にあるように
-(setq require-final-newline t)
+;;(setq require-final-newline t)
 
 ;; シンボリックリンクの読み込みを許可
 (setq vc-follow-symlinks t)
@@ -34,3 +34,6 @@
 
 ;; 特別に長い行があっても現在の行番号を知りたい
 (setq line-number-display-limit-width 10000)
+
+;; persist shell-command history
+(savehist-mode t)

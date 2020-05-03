@@ -84,6 +84,12 @@
 (if (file-exists-p init-host) (load-file init-host))
 
 ;;----------------------------------------------------------------------
+;; use-package
+;; if no use-package, do nothing. ライブラリがない場合、何もしない
+(unless (require 'use-package nil t)
+  (defmacro use-package (&rest args)))
+
+;;----------------------------------------------------------------------
 ;; change customize file (ファイル末尾でないと機能しない?)
 (setq custom-file (locate-user-emacs-file "custom.el"))
 ;;(add-hook 'kill-emacs-query-functions
