@@ -6,9 +6,6 @@
 ;; default to unified diffs
 (setq diff-switches '("-u" "-N"))
 
-;;; uncomment for CJK utf-8 support for non-Asian users
-(require 'un-define)
-
 ;; 対応する括弧をハイライト
 (setq show-paren-delay 0.15)  ;; default 0.15s
 (show-paren-mode t)
@@ -26,6 +23,8 @@
 
 ;; linum-mode をいじって Emacs を高速化
 (setq linum-delay t)
+(setq linum-format "%3d ")
+(global-set-key "\C-x\C-l" 'linum-mode)
 (defadvice linum-schedule (around my-linum-schedule () activate)
   (run-with-idle-timer 0.2 nil #'linum-update-current))
 

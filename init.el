@@ -50,10 +50,15 @@
     ;;	   (show-paren-mode t)
     (menu-bar-mode -1)))
  ((= emacs-major-version 22) ; Emacs22 only
-  ;; to convert kanji code, type C-x RET f
-  (utf-translate-cjk-mode t))
+  (progn
+    ;; uncomment for CJK utf-8 support for non-Asian users
+    (require 'un-define)
+    ;; to convert kanji code, type C-x RET f
+    (utf-translate-cjk-mode t)))
  ((<= emacs-major-version 21) ; Emacs21 or before
-    (progn (load "term/keyswap" t))))
+    (progn
+    (require 'un-define)
+    (load "term/keyswap" t))))
 
 ;;----------------------------------------------------------------------
 ;; autoload-if-found from: http://www.sodan.org/~knagano/emacs/dotemacs.html
