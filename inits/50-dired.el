@@ -23,6 +23,8 @@
 
 ;;=======================================================================
 
+(setq dired-auto-revert-buffer t)
+
 ;; Do What I Mean
 ;; make default target to other window.
 ;; be carefull using 'R'. default is move to other window. use 'r' to rename.
