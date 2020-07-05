@@ -16,3 +16,6 @@
        term-color-magenta                                                   
        term-color-cyan                                                      
        term-color-white])
+
+(setq ansi-color-names-vector
+      ["white" "red" "brightgreen" "yellow" "blue" "brightmagenta" "brightcyan" "black"])
