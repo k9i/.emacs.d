@@ -23,4 +23,5 @@
 ;; '(font-lock-comment-delimiter-face ((t (:foreground "#b0bec5"))))
 
  '(lazy-highlight ((t (:background "#465f5f"))))
-)
+ '(smerge-refined-added ((t (:inherit smerge-refined-change :background "#226622"))))
+ '(which-func ((t (:foreground "Blue2")))))
