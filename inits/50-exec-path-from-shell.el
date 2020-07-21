@@ -3,6 +3,7 @@
 (use-package exec-path-from-shell
 ;;  :ensure t
   :config
+  (setq exec-path-from-shell-arguments nil)
   (exec-path-from-shell-initialize)
   (exec-path-from-shell-copy-env "HISTFILE")
 
