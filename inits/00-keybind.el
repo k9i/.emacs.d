@@ -36,6 +36,7 @@
 (global-set-key (kbd "C-<down>")  'windmove-down)
 
 (global-set-key (kbd "<f6>") 'other-window)
+(global-set-key (kbd "M-o") 'other-window)
 (global-set-key (kbd "C-x C-o") 'other-window)
 (global-set-key (kbd "C-x d") 'dired-toggle)
 
