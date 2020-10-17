@@ -1,6 +1,7 @@
 ;; -*- Emacs-Lisp -*-
 
 (use-package json-mode
+  :defer t
   :mode
   (("\\.tfstate$" . json-mode)
    ("\\.tfstate.backup$" . json-mode)

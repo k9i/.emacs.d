@@ -2,6 +2,7 @@
 
 (use-package exec-path-from-shell
 ;;  :ensure t
+  :defer t
   :config
   (setq exec-path-from-shell-arguments nil)
   (exec-path-from-shell-initialize)

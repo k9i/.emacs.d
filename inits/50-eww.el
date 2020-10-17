@@ -1,6 +1,7 @@
  ;; -*- Emacs-Lisp -*-
 
 (use-package eww
+  :defer t
   :commands eww
   :init
   ;; default to google

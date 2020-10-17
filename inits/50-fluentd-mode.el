@@ -1,3 +1,5 @@
 ;; -*- Emacs-Lisp -*-
 
-(use-package fluentd-mode)
+(use-package fluentd-mode
+  :defer t
+  )
