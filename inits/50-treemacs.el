@@ -1,4 +1,5 @@
 (use-package treemacs
+  :disabled t
 ;  :if (locate-library "treemacs")
 ;  :commands treemacs
 ;  :defer t
@@ -74,6 +75,7 @@
 ;;  :config (treemacs-icons-dired-mode))
 
 (use-package treemacs-magit
+  :disabled t
 ;  :if (locate-library "treemacs-magit")
   :after treemacs magit
   )

@@ -1,5 +1,8 @@
 ;; -*- Emacs-Lisp -*-
 
+;; always use space to indent
+(setq-default indent-tabs-mode nil)
+
 ;; Always Use `y-or-n-p', Never `yes-or-no-p'
 (defalias 'yes-or-no-p 'y-or-n-p)
 
