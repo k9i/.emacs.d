@@ -13,7 +13,7 @@
     docker-tramp
     ;; eww
     magit
-    treemacs
+    ;;treemacs
     )
   "packages to be installed")
 
