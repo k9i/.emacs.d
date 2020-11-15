@@ -1,20 +1,24 @@
 
-    ;; ここに使っているパッケージを書く。
-    ;; C-u 0 M-: (変数名?)
+;; ここに使っているパッケージを書く。
+;; C-u 0 M-: (変数名?)
 (defvar my-favorite-package-list
   '(use-package
-    buffer-flip
-    which-key
-    markdown-mode
-    json-mode
-    yaml-mode
-    terraform-mode
-    dockerfile-mode
-    docker-tramp
-    ;; eww
-    magit
-    ;;treemacs
-    )
+     buffer-flip
+     which-key
+     markdown-mode
+     json-mode
+     yaml-mode
+     terraform-mode
+     dockerfile-mode
+     docker-tramp
+     ;; eww
+     magit
+     ;;treemacs
+     recently
+     company
+     counsel
+     swiper
+     )
   "packages to be installed")
 
 ;;------------------------

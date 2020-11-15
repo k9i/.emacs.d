@@ -15,10 +15,20 @@
   (setq company-transformers '(company-sort-by-backend-importance)) ;; ソート順
   ;;(setq company-idle-delay 0) ; デフォルトは0.5
   ;;(setq company-minimum-prefix-length 3) ; デフォルトは4
+  (setq company-dabbrev-downcase nil)
   (setq company-selection-wrap-around t) ; 候補の一番下でさらに下に行こうとすると一番上に戻る
   (setq completion-ignore-case t)
   (setq company-dabbrev-downcase nil)
 
+  (require 'color)
+  (let ((bg (face-attribute 'default :background)))
+    (custom-set-faces
+     `(company-tooltip ((t (:inherit default :background ,(color-lighten-name bg 2)))))
+     `(company-scrollbar-bg ((t (:background ,(color-lighten-name bg 10)))))
+     `(company-scrollbar-fg ((t (:background ,(color-lighten-name bg 5)))))
+     `(company-tooltip-selection ((t (:inherit font-lock-function-name-face))))
+     `(company-tooltip-common ((t (:inherit font-lock-constant-face))))))
+  
   :bind
   (("C-M-i" . company-complete)
    :map company-active-map
@@ -30,8 +40,8 @@
    :map company-active-map
    ("C-s" . company-filter-candidates) ;; C-sで絞り込む
    ("C-i" . company-complete-selection) ;; TABで候補を設定
-   ;;([tab] . company-complete-selection) ;; TABで候補を設定
-   ("C-f" . company-complete-selection) ;; C-fで候補を設定
+   ;;([tab] . company-complete-selection)
+   ;;("C-f" . company-complete-selection) ;; C-fで候補を設定
    :map emacs-lisp-mode-map
    ("C-M-i" . company-complete) ;; 各種メジャーモードでも C-M-iで company-modeの補完を使う
    )
