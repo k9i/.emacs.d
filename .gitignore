@@ -1,4 +1,9 @@
 # -*- mode: Conf -*-
+
+eshell/history
+recentf
+.recentf
+recently.el
 ido.last
 
 # Compiled

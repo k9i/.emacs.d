@@ -6,8 +6,13 @@
   :bind ("C-c d" . docker))
 
 (use-package dockerfile-mode
+;; :disabled t
   :defer t
-;;  :init
+  :mode (
+	 ("Dockerfile_*" . dockerfile-mode)
+         )
+  :init
+  (setq dockerfile-indent-offset 4)
   ;;  useless use setq-default in00-setting.el
 ;;  (add-hook 'docerfile-mode-hook
 ;;	    '(lambda ()
@@ -15,7 +20,9 @@
 ;;	       (setq tab-width 4)))
 )
 
-
+(use-package docker-comopse-mode
+  :defer t
+)
 
 ;; workaround hang up on alpine docker
 (use-package docker-tramp-compat
