@@ -2,6 +2,8 @@
 
 (use-package recently
 ;;  :disabled t
+  :if (locate-library "recently")
+;;  :defer t
   :init
   (recently-mode)
    (global-set-key "\C-x\ \C-r" 'recently-show)

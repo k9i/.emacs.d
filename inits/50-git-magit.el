@@ -5,6 +5,7 @@
 
 (use-package magit
 ;;  :ensure t
+  :pin melpa-stable
   :defer t
   :config
   (setq magit-git-global-arguments

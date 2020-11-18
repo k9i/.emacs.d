@@ -3,7 +3,7 @@
 (use-package conf-mode
   :defer t
   :mode
-  (("\\.cnf$" . conf-mode)
+  (("\\.cnf\\'" . conf-mode)
 ;;   ("/raddb/[a-z]+\\'" . conf-mode)  ;; see freeradius-mode
    )
   :init

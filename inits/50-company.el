@@ -1,6 +1,7 @@
 ;; -*- Emacs-Lisp -*-
 
 (use-package company
+  :if (locate-library "company")
 ;;  :disabled t
 ;;  :mode
 ;;  (("\\.sh$" . company-mode)

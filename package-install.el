@@ -13,7 +13,6 @@
      docker-tramp
      ;; eww
      magit
-     ;;treemacs
      recently
      company
      counsel
