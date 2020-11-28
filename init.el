@@ -85,7 +85,7 @@
        ;; installed packages.  Don't delete this line.  If you don't want it,
        ;; just comment it out by adding a semicolon to the start of the line.
        ;; You may delete these explanatory comments.
-       (package-initialize)))
+       (package-initialize t)))
 
 (add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/") t)
 (add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
@@ -103,7 +103,7 @@
 (eval-when-compile
   ;; Following line is not needed if use-package.el is in ~/.emacs.d
   (add-to-list 'load-path (locate-user-emacs-file "elpa"))
-  (require 'use-package t)
+  (require 'use-package nil t)
 )
 
 ;;----------------------------------------------------------------------
