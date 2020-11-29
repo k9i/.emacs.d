@@ -1,6 +1,7 @@
 
 ;; ここに使っているパッケージを書く。
-;; C-u 0 M-: (変数名?)
+;; use-package.el 経由でインストールするpackageは記述不要。
+;; M-x eval-buffer
 (defvar my-favorite-package-list
   '(use-package
      buffer-flip
@@ -28,12 +29,15 @@
 ;;    smartrep
 
 ;;------------------------
-;;(require 'package)
+(require 'package)
 ;;(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
 ;;(add-to-list 'package-archives '("melpa-stable" . "http://stable.melpa.org/packages/") t)
 ;;(package-initialize)
 
+;; update package information
 (unless package-archive-contents (package-refresh-contents))
+
+;; install package in my-favorite-package-list, if not installed
 (dolist (pkg my-favorite-package-list)
   (unless (package-installed-p pkg)
     (package-install pkg)))
