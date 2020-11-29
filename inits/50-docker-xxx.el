@@ -2,6 +2,7 @@
 
 
 (use-package docker
+  :requires bind-key
   :defer t
   :bind ("C-c d" . docker))
 

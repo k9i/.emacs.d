@@ -46,6 +46,9 @@
 ;; ibuffer
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
+;; shell
+(global-set-key (kbd "C-c s") 'shell)
+
 ;; quick-yes
 (require 'quick-yes)
 

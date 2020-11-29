@@ -3,21 +3,22 @@
 ;; use-package.el 経由でインストールするpackageは記述不要。
 ;; M-x eval-buffer
 (defvar my-favorite-package-list
-  '(use-package
-     buffer-flip
-     which-key
-     markdown-mode
-     json-mode
-     yaml-mode
-     terraform-mode
-     dockerfile-mode
-     docker-tramp
-     ;; eww
-     magit
-     recently
-     company
-     counsel
-     swiper
+  '( 
+    init-loader
+    use-package
+    magit
+    ;;bind-key
+    browse-kill-ring
+    which-key
+    exec-path-from-shell
+    markdown-mode
+    json-mode
+    yaml-mode
+    terraform-mode
+    dockerfile-mode
+    docker-tramp
+    ;; eww
+    recently
      )
   "packages to be installed")
 
@@ -32,7 +33,7 @@
 (require 'package)
 ;;(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
 ;;(add-to-list 'package-archives '("melpa-stable" . "http://stable.melpa.org/packages/") t)
-;;(package-initialize)
+(package-initialize)
 
 ;; update package information
 (unless package-archive-contents (package-refresh-contents))

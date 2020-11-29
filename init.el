@@ -6,6 +6,61 @@
   (setq user-emacs-directory (file-name-directory load-file-name)))
 
 ;;----------------------------------------------------------------------
+;; package.el
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+
+(cond ((<= emacs-major-version 23)
+       (add-to-list 'load-path (locate-user-emacs-file "lisp/package"))))
+
+(setq package-check-signature nil)
+;(setq package-enable-at-startup nil)
+
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(when (require 'package nil t)
+  ;;(add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/") t)
+  ;;(add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+  ;;(add-to-list 'package-archives '("melpa-stable" . "http://stable.melpa.org/packages/") t)
+  (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+  (package-initialize))
+
+;;----------------------------------------------------------------------
+;; use-package.el
+;; https://github.com/jwiegley/use-package
+
+;; Bootstrap 'use-package'
+(eval-after-load 'gnutls
+  '(add-to-list 'gnutls-trustfiles "/etc/ssl/cert.pem"))
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
+
+(eval-when-compile
+  ;; Following line is not needed if use-package.el is in ~/.emacs.d
+  (add-to-list 'load-path (locate-user-emacs-file "elpa"))
+  (add-to-list 'load-path (locate-user-emacs-file "elpa/use-package-2.4.1"))
+  (add-to-list 'load-path (locate-user-emacs-file "elpa/bind-key-2.4.1"))
+  (add-to-list 'load-path (locate-user-emacs-file "elpa/exec-path-from-shell-1.12"))
+  (add-to-list 'load-path (locate-user-emacs-file "elpa/which-key-3.5.0"))
+  (require 'use-package)
+)
+
+;;(require 'diminish)  ;; if you use :diminish
+;;(require 'bind-key)  ;; if you use any :bind variant
+
+;;(setq use-package-always-ensure t)
+
+;; https://qiita.com/kai2nenobu/items/
+;; if use-package does not exist, replace with dummy macro to avoid error.
+;;(unless (require 'use-package nil t)
+;;  (defmacro use-package (&rest args)))
+
+;;----------------------------------------------------------------------
 ;; add ~/.emacs.d/lisp to load-path 
 (add-to-list 'load-path (locate-user-emacs-file "lisp"))
 
@@ -65,46 +120,6 @@
     (progn
     (require 'un-define)
     (load "term/keyswap" t))))
-
-;;----------------------------------------------------------------------
-;; package.el
-;; Added by Package.el.  This must come before configurations of
-;; installed packages.  Don't delete this line.  If you don't want it,
-;; just comment it out by adding a semicolon to the start of the line.
-;; You may delete these explanatory comments.
-
-(setq package-check-signature nil)
-;(setq package-enable-at-startup nil)
-
-(cond ((<= emacs-major-version 23)
-       (add-to-list 'load-path (locate-user-emacs-file "lisp/package"))
-       (when (require 'package nil t)
-	 (package-initialize)))
-      (t
-       ;; Added by Package.el.  This must come before configurations of
-       ;; installed packages.  Don't delete this line.  If you don't want it,
-       ;; just comment it out by adding a semicolon to the start of the line.
-       ;; You may delete these explanatory comments.
-       (package-initialize t)))
-
-(add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/") t)
-(add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
-;;(add-to-list 'package-archives '("melpa-stable" . "http://stable.melpa.org/packages/") t)
-
-;;----------------------------------------------------------------------
-;; use-package.el
-;; https://github.com/jwiegley/use-package
-
-;; https://qiita.com/kai2nenobu/items/
-;; if use-package does not exist, replace with dummy macro to avoid error.
-(unless (require 'use-package nil t)
-  (defmacro use-package (&rest args)))
-
-(eval-when-compile
-  ;; Following line is not needed if use-package.el is in ~/.emacs.d
-  (add-to-list 'load-path (locate-user-emacs-file "elpa"))
-  (require 'use-package nil t)
-)
 
 ;;----------------------------------------------------------------------
 ;; init-loader

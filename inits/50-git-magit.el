@@ -8,18 +8,20 @@
 (setq magit-git-executable "magit.sh")
 
 (use-package magit
-;;  :ensure t
+  :ensure t
+;;  :requires magit-popup magit-section
 ;;  :pin melpa-stable
-  :defines mait-git-global-arguments magit-git-executable
+  ;;  :defines mait-git-global-arguments magit-git-executable
+  ;;:functions magit-status magit-dispatch
   :config
-  (setq magit-git-executable nil)  ;; Restore pre-workaround setting
+  (setq magit-git-executable "git")  ;; Restore pre-workaround setting
   (setq magit-git-global-arguments
 	(nconc magit-git-global-arguments
 	       '("-c" "color.ui=false"
 		 "-c" "color.diff=false")))
   :bind
   (("C-x g" . magit-status)
-   ("C-x M-g" . magit-dispatch-popup))
+   ("C-x M-g" . magit-dispatch))
 )
 
 (use-package git-complete
@@ -36,4 +38,3 @@
 ;;(global-set-key (kbd "C-c C-c") 'git-complete)
 ;;(add-to-list 'load-path "~/.emacs.d/git-complete") ;; お好きなように
 ;;(setq git-complete-enable-autopair t)
- 

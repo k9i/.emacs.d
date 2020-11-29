@@ -1,6 +1,7 @@
 ;; -*- Emacs-Lisp -*-
 
-(defvar exec-path-from-shell-arguments nil)
+;;(defvar exec-path-from-shell-arguments nil)
+
 (use-package exec-path-from-shell
 ;;  :ensure t
 ;;  :defer t

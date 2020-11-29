@@ -10,6 +10,7 @@
 	 (shell-mode . server-start)
 	 )
   :bind (
+	 ("C-c s" . shell)
 	 ("C-c l" . shell-clear-buffer)
 	 ("C-c c-l" . shell-clear-buffer)
 	 )
