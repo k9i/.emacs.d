@@ -4,8 +4,8 @@
 (setenv "GIT_PAGER" "head -n 40")
 
 ;; Workaround: in root user magit-git-global-arguments not work
-(defvar magit-git-executable)
-(setq magit-git-executable "magit.sh")
+;;(defvar magit-git-executable)
+;;(setq magit-git-executable "magit.sh")
 
 (use-package magit
   :ensure t
