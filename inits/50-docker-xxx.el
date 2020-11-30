@@ -13,6 +13,10 @@
 	 ("Dockerfile_*" . dockerfile-mode)
          )
   :init
+  (add-hook 'dockerfile-mode-hook
+	    '(lambda ()
+	       (setq tab-width 4)
+	       ))
   (setq dockerfile-indent-offset 4)
   ;;  useless use setq-default in00-setting.el
 ;;  (add-hook 'docerfile-mode-hook
