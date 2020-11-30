@@ -1,5 +1,6 @@
 # -*- mode: Conf -*-
 
+transient/
 eshell/history
 recentf
 .recentf
