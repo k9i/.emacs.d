@@ -10,6 +10,7 @@
 (use-package magit
   :ensure t
 ;;  :requires magit-popup magit-section
+  :requires transient  ;; or remove transient*/transient.elc then restart
 ;;  :pin melpa-stable
   ;;  :defines mait-git-global-arguments magit-git-executable
   ;;:functions magit-status magit-dispatch
