@@ -1,11 +1,22 @@
 ;; -*- Emacs-Lisp -*-
 
+;; ----------------------------------------------------------------------
+;; tab
+;; https://emacs.stackexchange.com/questions/52047/how-to-change-shell-script-mode-indentation-not-to-use-tabs
+
 ;; always use space to indent
-;;(setq-default indent-tabs-mode nil)
+(setq-default indent-tabs-mode nil)
+
+;; sh-mode
+(defun turn-off-indent-tabs-mode ()
+  (setq indent-tabs-mode nil))
+(add-hook 'sh-mode-hook #'turn-off-indent-tabs-mode)
+
 ;; for dockerfile-mode to obey
 ;;(setq-default indent-tabs-mode nil tab-width 4)
 ;; -> Use: # -*- mode:Conf; tab-width:4 -*-
 
+;; ----------------------------------------------------------------------
 ;; Always Use `y-or-n-p', Never `yes-or-no-p'
 (defalias 'yes-or-no-p 'y-or-n-p)
 
