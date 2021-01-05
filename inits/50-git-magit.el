@@ -19,7 +19,8 @@
   (setq magit-git-global-arguments
 	(nconc magit-git-global-arguments
 	       '("-c" "color.ui=false"
-		 "-c" "color.diff=false")))
+		 "-c" "color.diff=false"
+		 "-c" "fetch.prune=true")))
   :bind
   (("C-x g" . magit-status)
    ("C-x M-g" . magit-dispatch))
