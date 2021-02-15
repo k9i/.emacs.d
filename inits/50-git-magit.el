@@ -12,6 +12,8 @@
 ;;  :requires magit-popup magit-section
   :requires transient  ;; or remove transient*/transient.elc then restart
 ;;  :pin melpa-stable
+  :init
+  (add-hook 'after-save-hook 'magit-after-save-refresh-status t)
   ;;  :defines mait-git-global-arguments magit-git-executable
   ;;:functions magit-status magit-dispatch
   :config
