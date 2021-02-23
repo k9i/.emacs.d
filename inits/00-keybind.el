@@ -12,6 +12,8 @@
 (global-set-key (kbd "M-ESC ESC") 'keyboard-quit)
 (global-set-key (kbd "C-o") 'other-window)
 (global-set-key "\M-\\" 'indent-region)
+(global-set-key (kbd "C-c ;") 'comment-or-uncomment-region)
+(setq comment-style 'multi-line)
 
 ;; override C-\
 (global-set-key (kbd "C-\\") 'indent-region)
