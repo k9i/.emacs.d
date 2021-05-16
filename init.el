@@ -144,8 +144,10 @@
 (if (file-readable-p custom-file)
     (load custom-file t nil nil))
 
+
+;;----------------------------------------------------------------------
+(provide 'init)
 ;;----------------------------------------------------------------------
 ;; Local variables:
 ;; mode: Emacs-Lisp
 ;; End:
-;;

@@ -6,4 +6,4 @@
 (setq uniquify-buffer-name-style 'post-forward)
 ;; (setq uniquify-buffer-name-style 'post-forward-angle-brackets)
 
-;; (setq uniquify-min-dir-content 2)
+(setq uniquify-min-dir-content 1)

@@ -8,6 +8,8 @@
 
 (use-package dockerfile-mode
 ;; :disabled t
+  :custom
+  (docker-tramp-use-names t "Whether use names instead of id.")
   :defer t
   :mode (
 	 ("Dockerfile_*" . dockerfile-mode)

@@ -8,6 +8,7 @@
 (define-key key-translation-map (kbd "C-h") (kbd "<DEL>"))
 (global-set-key "\C-h" 'delete-backward-char)
 
+(global-set-key (kbd "M-RET") 'manual-entry)
 (global-set-key (kbd "M-g") 'goto-line)
 (global-set-key (kbd "M-ESC ESC") 'keyboard-quit)
 (global-set-key (kbd "C-o") 'other-window)
