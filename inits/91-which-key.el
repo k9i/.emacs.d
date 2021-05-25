@@ -7,6 +7,7 @@
 ;;  (which-key-mode 1))
 
 (use-package which-key
+  :ensure t
   :config
   (which-key-setup-side-window-bottom)    ;ミニバッファ
   ;;(which-key-setup-side-window-right)     ;右端 (ターミナルではスペースが不足)

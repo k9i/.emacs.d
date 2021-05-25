@@ -1,5 +1,9 @@
 ;; -*- Emacs-Lisp -*-
 
+(use-package browse-kill-ring
+  :ensure t
+)
+
 (require 'browse-kill-ring+)
 (browse-kill-ring-default-keybindings)
 
